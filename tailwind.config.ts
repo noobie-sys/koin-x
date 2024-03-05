@@ -58,6 +58,7 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -72,6 +73,10 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      gradient : {
+        background : "linear-gradient(90deg, rgba(236,83,83,1) 0%, rgba(214,164,86,1) 50%, rgba(56,199,105,1) 94%)"
+      }
+    
     },
   },
   plugins: [require("tailwindcss-animate")],
