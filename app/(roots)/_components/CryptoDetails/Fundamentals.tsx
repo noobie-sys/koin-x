@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { Info } from "lucide-react";
 import React, { useState } from "react";
+import FundamentalDetails from "./fundamental-details";
 
 const Fundamentals = () => {
   const [active, setActive] = useState(false);
@@ -27,8 +28,8 @@ const Fundamentals = () => {
           </h1>
         </div>
       </div>
-      <div className="details">
-        
+      <div className="details w-full h-full">
+        <FundamentalDetails />
       </div>
     </div>
   );
