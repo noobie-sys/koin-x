@@ -5,7 +5,7 @@ import React from 'react'
 
 const AdditinalCard = () => {
   return (
-    <div className='w-80  bg-[#0052FE] rounded-2xl flex flex-col items-center p-10'>
+    <div className='w-80  bg-[#0052FE] shadow-xl rounded-2xl flex flex-col items-center p-10'>
       <div className='mx-auto w-full flex justify-center items-center flex-col'>
         <h1 className='text-slate-50 font-medium text-lg text-center md:px-4'>Get Started with KoinX for Free</h1>
         <p className='text-xs text-center text-white pt-4 tracking-wide'>With our range of feautres that you can equip for free, KoinX allows you to be more educated and aware of your tak reports.</p>
