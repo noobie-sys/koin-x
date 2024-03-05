@@ -4,6 +4,8 @@ import { Info } from "lucide-react";
 import React, { useState } from "react";
 import FundamentalDetails from "./fundamental-details";
 
+
+
 const Fundamentals = () => {
   const [active, setActive] = useState(false);
   return (

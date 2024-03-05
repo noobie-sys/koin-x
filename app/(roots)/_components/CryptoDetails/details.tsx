@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 import { Overview } from "./Overview-coin";
 import Fundamentals from "./Fundamentals";
+import useData from "@/hooks/useData";
 
 const navbarToggle = ["Overview", "Fundamental", "News Insight", "Sentiments"];
 
@@ -12,8 +13,7 @@ const Details = () => {
     setActive(!active);
     // console.log(active)
   };
-  const [data , setData] = useState([])
- 
+
   return (
     <div className="w-full flex flex-col py-10">
       <div className={"flex gap-10 border-b border-slate-400 pb-2"}>
