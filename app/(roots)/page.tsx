@@ -6,6 +6,7 @@ import TrendingCard from "./_components/RightNav/trendingCard";
 import Details from "./_components/CryptoDetails/details";
 import useData from "@/hooks/useData";
 import Sentiments from "./_components/CryptoDetails/Sentiments";
+import TrendindData from "./_components/TrendindData";
 
 
 
@@ -16,6 +17,7 @@ export default  function Home() {
         <TradingViewWidget /> 
         <Details />
         <Sentiments />
+        <TrendindData />
       </section>
       <aside className="flex flex-col  justify-center items-center h-full gap-3    ">
         <AdditinalCard />

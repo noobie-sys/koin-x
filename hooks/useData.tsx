@@ -13,7 +13,6 @@ const useData = () => {
         const res = await fetch(
           "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en"
         );
-
         if (!res.ok) {
           throw new Error("Data not Found..");
         }
@@ -28,8 +27,9 @@ const useData = () => {
       }
     };
     fetchData();
-  }, [data]);
-  return { loading,data};
+    // trendingCoin()
+  }, []);
+  return { loading,data };
 };
 
 export default useData;

@@ -6,6 +6,7 @@ import { Triangle } from "lucide-react"
 export const Overview = () => {
 
     const {data , loading} = useData();
+    console.log(data)
 
     if(loading && data === undefined) {
         return (

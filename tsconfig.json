@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(roots)/_components/CryptoDetails/tradingViewChart.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(roots)/_components/CryptoDetails/tradingViewChart.jsx", "app/(roots)/_components/TrendindData/index.jsx"],
   "exclude": ["node_modules"]
 }

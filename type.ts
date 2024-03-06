@@ -14,3 +14,6 @@ export interface DataTypes {
     last_updated : string,
 }
 
+export interface trendingData {
+
+}
