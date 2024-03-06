@@ -3,7 +3,8 @@
 // TradingViewWidget.jsx
 import React, { useEffect, useRef, memo } from "react";
 
-function TrendingChart() {
+
+const TrendingMiniChart = ({symbol}) => {
   const container = useRef();
 
   useEffect(() => {
@@ -14,9 +15,9 @@ function TrendingChart() {
     script.async = true;
     script.innerHTML = `
     {
-      "symbol": "GALA",
-      "width": "250",
-      "height": "220",
+      "symbol": "${symbol}",
+      "width": "100%",
+      "height": "150",
       "locale": "en",
       "dateRange": "1M",
       "colorTheme": "light",
@@ -39,14 +40,4 @@ function TrendingChart() {
   );
 }
 
-export default memo(TrendingChart);
-
-// <!-- TradingView Widget BEGIN -->
-// <div class="tradingview-widget-container">
-//   <div class="tradingview-widget-container__widget"></div>
-//   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-//   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-
-//   </script>
-// </div>
-// <!-- TradingView Widget END -->
+export default memo(TrendingMiniChart);

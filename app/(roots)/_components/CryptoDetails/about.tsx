@@ -45,7 +45,7 @@ const AboutCoin = () => {
           incidunt pariatur totam ex, tenetur officiis suscipit libero!
         </p>
       </div>
-      <div className="flex lg:flex-row flex-col gap-5 border-b pb-10 border-muted-foreground/50">
+      <div className="flex xl:flex-row flex-col gap-5 border-b pb-10 border-muted-foreground/50">
         <div className="w-full">
           <Link
             href="#"
