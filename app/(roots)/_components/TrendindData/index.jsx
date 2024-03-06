@@ -14,11 +14,11 @@ function TrendingChart() {
     script.async = true;
     script.innerHTML = `
     {
-      "symbol": "FX:EURUSD",
+      "symbol": "GALA",
       "width": "250",
       "height": "220",
       "locale": "en",
-      "dateRange": "3M",
+      "dateRange": "1M",
       "colorTheme": "light",
       "isTransparent": true,
       "autosize": false,

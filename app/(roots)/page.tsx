@@ -1,12 +1,10 @@
 'use client'
-import Image from "next/image";
 import TradingViewWidget from "./_components/CryptoDetails/tradingViewChart";
 import AdditinalCard from "./_components/RightNav/AdditionalCard";
 import TrendingCard from "./_components/RightNav/trendingCard";
 import Details from "./_components/CryptoDetails/details";
-import useData from "@/hooks/useData";
 import Sentiments from "./_components/CryptoDetails/Sentiments";
-import TrendindData from "./_components/TrendindData";
+import AboutCoin from "./_components/CryptoDetails/about";
 
 
 
@@ -17,7 +15,7 @@ export default  function Home() {
         <TradingViewWidget /> 
         <Details />
         <Sentiments />
-        <TrendindData />
+        <AboutCoin />
       </section>
       <aside className="flex flex-col  justify-center items-center h-full gap-3    ">
         <AdditinalCard />
