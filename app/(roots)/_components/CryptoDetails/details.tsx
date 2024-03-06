@@ -1,18 +1,13 @@
 "use client";
 import { cn } from "@/lib/utils";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Overview } from "./Overview-coin";
 import Fundamentals from "./Fundamentals";
-import useData from "@/hooks/useData";
 
 const navbarToggle = ["Overview", "Fundamental", "News Insight", "Sentiments"];
 
 const Details = () => {
-  const [active, setActive] = useState(false);
-  const handleClick = () => {
-    setActive(!active);
-    // console.log(active)
-  };
+
 
   return (
     <div className="w-full flex flex-col py-10">

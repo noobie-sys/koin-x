@@ -8,7 +8,8 @@ const TrendingMiniChart = ({symbol}) => {
   const container = useRef();
 
   useEffect(() => {
-    const script = document.createElement("script");
+    try {
+      const script = document.createElement("script");
     script.src =
       "https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js";
     script.type = "text/javascript";
@@ -28,12 +29,17 @@ const TrendingMiniChart = ({symbol}) => {
       "noTimeScale": true
     }`;
     container.current.appendChild(script);
+    } catch (error) {
+      console.log(error?.message)
+    }
+    
   }, []);
 
   return (
     <>
       <div
         className="tradingview-widget-container rounded-lg w-full "
+        
         ref={container}
       ></div>
     </>

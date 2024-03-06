@@ -15,7 +15,6 @@ import Image from "next/image";
 
 export default function TrendingCarousel() {
   const { data } = useTrendingCoin();
-  console.log(data, "Data Fetched");
   return (
     <div className="w-full">
       <Swiper
@@ -44,8 +43,8 @@ export default function TrendingCarousel() {
         {data === undefined
           ? "Data is not found.."
           : data?.map((item: any, idx: number) => (
-              <SwiperSlide>
-                <div className="w-full  border-2 border-gray-400/60 rounded-lg shadow-lg ">
+              <SwiperSlide key={idx}>
+                <div key={idx} className="w-full  border-2 border-gray-400/60 rounded-lg shadow-lg ">
                   <div className="details">
                     <div className="flex items-center gap-4 p-2">
                       <div className="overflow-hidden rounded-full w-50 h-50">
