@@ -16,10 +16,10 @@ const Details = () => {
 
   return (
     <div className="w-full flex flex-col py-10">
-      <div className={"flex gap-10 border-b border-slate-400 pb-2"}>
+      <div className={"flex gap-10 border-b border-slate-400 pb-2 overflow-hidden"}>
         {navbarToggle.map((nav, idx) => (
           <div key={idx} className={cn("text-lg font-semibold")}>
-            <h1 className="cursor-pointer">{nav}</h1>
+            <h1 className="cursor-pointer line-clamp-1">{nav}</h1>
           </div>
         ))}
       </div>

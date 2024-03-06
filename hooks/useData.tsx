@@ -1,34 +1,35 @@
 "use client";
-import { useEffect, useState } from "react";
-
-export interface Props {
-  getBitcoinData: Promise<any>;
-}
+import { DataTypes } from "@/type";
+import { useEffect, useState , memo } from "react";
 
 const useData = () => {
   const [loading, setLoading] = useState<boolean>(false);
-  const [data, setData] = useState<any>([]);
+  const [data, setData] = useState<DataTypes[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const res = await fetch(
-        "https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=true"
-      );
+      try {
+        const res = await fetch(
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en"
+        );
 
-      if (!res.ok) {
-        throw new Error("Data not Found..");
+        if (!res.ok) {
+          throw new Error("Data not Found..");
+        }
+        if (res.ok) {
+          const fetchedData = await res.json();
+          setData(fetchedData);
+        }
+      } catch (error) {
+        console.log("Fetching error:", error);
+      } finally {
+        setLoading(false);
       }
-
-      if (res.status === 200) {
-        const fetchedData = await res.json();
-        setData(fetchedData);
-      }
-      setLoading(false);
     };
-    fetchData()
-  }, []);
-  return {loading , data}
+    fetchData();
+  }, [data]);
+  return { loading,data};
 };
 
 export default useData;

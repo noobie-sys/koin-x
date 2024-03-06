@@ -20,7 +20,7 @@ const Fundamentals = () => {
         />
         <div
           className={cn(
-            "bg-slate-200 rounded-xl ml-4 absolute w-96 left-44 opacity-0 invisible transition   p-2 h-20",
+            "bg-slate-200 rounded-xl ml-4 absolute w-96 top-7 lg:top-0 lg:left-44 opacity-0 invisible transition   p-2 h-20",
             active && "opacity-100 visible"
           )}
         >

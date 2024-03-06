@@ -5,7 +5,7 @@ import { Triangle } from "lucide-react";
 
 const TrendingCard = () => {
   return (
-    <div className="w-80  mt-10 bg-white shadow-lg rounded-lg flex flex-col items-start p-2 ">
+    <div className="lg:w-80 w-[80vw] mb-10 lg:mb-0  mt-10 bg-white shadow-lg rounded-lg flex flex-col items-start p-2 ">
       <h1 className="font-semibold px-1">Trending Coins (24h)</h1>
       <div className="w-full flex gap-y-2 flex-col pt-3 cursor-pointer">
         <div className="w-full flex justify-between hover:bg-primary/5 p-2 ">
